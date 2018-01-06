@@ -1,0 +1,40 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #383838;
+}
+
+a {
+  color: #383838;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("/fonts/Circular_Air-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("/fonts/Circular_Air-Book.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url("/fonts/Circular_Air-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
