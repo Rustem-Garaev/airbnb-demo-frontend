@@ -9,7 +9,7 @@ export const Title = styled.h1`
   font-size: 24px;
   line-height: 28px;
   color: #383838;
-  padding-right: 30px;
+  padding-right: 65px;
 
   @media only screen and (min-width: 577px) {
     font-size: 32px;
@@ -72,7 +72,7 @@ export const HorizonScroll = styled.div`
   width: 100%;
   height: 100%;
   overflow-x: auto;
-  overflow-y: hidden; /*костыль*/
+  overflow-y: hidden;
   &::-webkit-scrollbar {
     width: 0;
   }

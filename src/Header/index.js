@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import Logo from "./Logo";
-import Shape from "./Shape";
+import Arrow from "./Arrow";
 import SearchField from "./SearchField";
 import Menu from "./Menu";
 
@@ -31,7 +31,7 @@ export default () => {
           <Col xs={2} md={1} lg={1}>
             <Wrapper>
               <Logo />
-              <Shape />
+              <Arrow />
             </Wrapper>
           </Col>
           <Col xs={10} md={5} lg={5}>

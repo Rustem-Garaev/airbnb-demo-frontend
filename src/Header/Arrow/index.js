@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import ShapeImg from "./shape.svg";
+import arrowImg from "./arrow.svg";
 
-const Shape = styled.img`
+const Arrow = styled.img`
   margin-left: 5px;
   width: 10px;
   height: 6px;
@@ -17,5 +17,5 @@ const Shape = styled.img`
 `;
 
 export default () => {
-  return <Shape src={ShapeImg} alt="Shape" />;
+  return <Arrow src={arrowImg} alt="Menu" />;
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
-import { Title, HorizonScroll } from "../generalElements";
+import { Title, HorizonScroll } from "../ui";
 import homesImg from "./Homes.png";
 import experiencesImg from "./Experiences.png";
 import restaurantsImg from "./Restaurants.png";

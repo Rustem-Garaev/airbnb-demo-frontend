@@ -2,7 +2,7 @@ import styled from "styled-components";
 import arrowDown from "./arrowDown.svg";
 
 export const Select = styled.select`
-  width: 100%;
+  width: 47%;
   appearance: none;
   background: url(${arrowDown}) no-repeat 95% center;
   border-radius: 4px;
@@ -15,6 +15,7 @@ export const Select = styled.select`
   padding: 12px 8px;
 
   @media only screen and (min-width: 769px) {
+    width: 100%;
     font-size: 15px;
     line-height: 18px;
     padding: 15px 8px 14px 8px;

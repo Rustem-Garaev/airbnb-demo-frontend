@@ -1,14 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
-import {
-  Title,
-  Img,
-  SeeAll,
-  SliderArrow,
-  Link,
-  HorizonScroll
-} from "../generalElements";
+import { Title, Img, SeeAll, SliderArrow, Link, HorizonScroll } from "../ui";
 import StarList from "../StarList";
 
 import img1 from "./experiences-1.png";
@@ -26,7 +19,7 @@ const Price = styled.span`
   font-weight: 700;
   padding-right: 5px;
 
-  @media only screen and (min-width: 576px) {
+  @media only screen and (min-width: 577px) {
     font-size: 15px;
     line-height: 18px;
   }

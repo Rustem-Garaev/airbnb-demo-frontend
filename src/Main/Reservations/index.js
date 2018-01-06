@@ -1,14 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
-import {
-  Title,
-  Img,
-  SeeAll,
-  SliderArrow,
-  Link,
-  HorizonScroll
-} from "../generalElements";
+import { Title, Img, SeeAll, SliderArrow, Link, HorizonScroll } from "../ui";
 import img1 from "./reservations-1.png";
 import img2 from "./reservations-2.png";
 import img3 from "./reservations-3.png";

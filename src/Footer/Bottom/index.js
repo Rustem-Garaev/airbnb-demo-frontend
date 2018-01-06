@@ -5,7 +5,7 @@ import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";
 import shape from "./shape.svg";
 import twitter from "./twitter.svg";
-import { Link } from "../common";
+import { Link as CommonLink } from "../common.js";
 
 const Bottom = styled.div`
   box-shadow: 0px -0.5px 0px rgba(72, 72, 72, 0.3);
@@ -21,7 +21,7 @@ const Bottom = styled.div`
   }
 `;
 
-const LinkExt = Link.extend`
+const Link = CommonLink.extend`
   padding-right: 12px;
 `;
 
@@ -40,60 +40,32 @@ const Right = styled.nav`
 export default () => {
   return (
     <Bottom>
-      <Row>
-        <Col xs={12}>
-          <Row middle="xs">
-            <Col xs={12} md={3} lg={2}>
-              <Left>
-                <LinkExt href="#">
-                  <Img src={shape} />
-                </LinkExt>
-                <LinkExt href="#">&#169; Airbnb inc.</LinkExt>
-              </Left>
-            </Col>
-            <Col xs={12} md={6} mdOffset={3} lg={6} lgOffset={4}>
-              <Right>
-                <LinkExt href="#">Terms</LinkExt>
-                <LinkExt href="#">Privacy</LinkExt>
-                <LinkExt href="#">Site map</LinkExt>
-                <LinkExt href="#">
-                  <Img src={facebook} />
-                </LinkExt>
-                <LinkExt href="#">
-                  <Img src={twitter} />
-                </LinkExt>
-                <LinkExt href="#">
-                  <Img src={instagram} />
-                </LinkExt>
-              </Right>
-            </Col>
-          </Row>
+      <Row middle="xs">
+        <Col xs={12} md={6} lg={6}>
+          <Left>
+            <Link href="#">
+              <Img src={shape} />
+            </Link>
+            <Link href="#">&#169; Airbnb inc.</Link>
+          </Left>
+        </Col>
+        <Col xs={12} md={6} lg={6}>
+          <Right>
+            <Link href="#">Terms</Link>
+            <Link href="#">Privacy</Link>
+            <Link href="#">Site map</Link>
+            <Link href="#">
+              <Img src={facebook} />
+            </Link>
+            <Link href="#">
+              <Img src={twitter} />
+            </Link>
+            <Link href="#">
+              <Img src={instagram} />
+            </Link>
+          </Right>
         </Col>
       </Row>
     </Bottom>
   );
 };
-/*
- <Bottom>
-      <Left>
-        <LinkExt href="#">
-          <Img src={shape} />
-        </LinkExt>
-        <LinkExt href="#">&#169; Airbnb inc.</LinkExt>
-      </Left>
-      <span>
-        <LinkExt href="#">Terms</LinkExt>
-        <LinkExt href="#">Privacy</LinkExt>
-        <LinkExt href="#">Site map</LinkExt>
-        <LinkExt href="#">
-          <Img src={facebook} />
-        </LinkExt>
-        <LinkExt href="#">
-          <Img src={instagram} />
-        </LinkExt>
-        <LinkExt href="#">
-          <Img src={twitter} />
-        </LinkExt>
-      </span>
-    </Bottom>
-*/

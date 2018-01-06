@@ -1,14 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
-import {
-  Title,
-  Img,
-  SeeAll,
-  SliderArrow,
-  Link,
-  HorizonScroll
-} from "../generalElements";
+import { Title, Img, SeeAll, SliderArrow, Link, HorizonScroll } from "../ui";
 import StarList from "../StarList";
 
 import img1 from "./homes-1.png";

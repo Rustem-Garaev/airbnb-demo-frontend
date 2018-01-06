@@ -8,16 +8,16 @@ export const List = styled.nav`
   }
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h5`
+  margin: 0 0 19px 0;
   font-size: 12px;
   font-weight: 700;
   line-height: 14px;
-  padding-bottom: 19px;
   color: #383838;
   @media only screen and (min-width: 991px) {
     font-size: 15px;
     line-height: 18px;
-    padding-bottom: 16px;
+    margin-bottom: 16px;
   }
 `;
 
@@ -25,11 +25,11 @@ export const Link = styled.a`
   text-decoration: none;
   font-size: 12px;
   line-height: 14px;
-  padding-bottom: 11px;
+  margin-bottom: 11px;
   color: #636363;
   @media only screen and (min-width: 991px) {
     font-size: 15px;
     line-height: 18px;
-    padding-bottom: 8px;
+    margin-bottom: 8px;
   }
 `;

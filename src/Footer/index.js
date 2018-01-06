@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import styled from "styled-components";
 import { Select } from "./Select";
-import { List, Title, Link } from "./common";
+import { List, Title, Link } from "./common.js";
 import Bottom from "./Bottom";
 
 const Footer = styled.footer`
@@ -17,26 +17,33 @@ const Footer = styled.footer`
   }
 `;
 
+const SelectsWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media only screen and (min-width: 769px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+`;
+
 export default () => {
   return (
     <Footer>
       <Grid>
         <Row>
           <Col xs={12} md={3} lg={3}>
-            <Row>
-              <Col xs={6} md={12} lg={12}>
-                <Select>
-                  <option>English</option>
-                  <option>Russian</option>
-                </Select>
-              </Col>
-              <Col xs={6} md={12} lg={12}>
-                <Select>
-                  <option>United States dollar</option>
-                  <option>Russian ruble</option>
-                </Select>
-              </Col>
-            </Row>
+            <SelectsWrapper>
+              <Select>
+                <option>English</option>
+                <option>Russian</option>
+              </Select>
+              <Select>
+                <option>United States dollar</option>
+                <option>Russian ruble</option>
+              </Select>
+            </SelectsWrapper>
           </Col>
           <Col md={2} mdOffset={1} lg={2} lgOffset={1}>
             <List>
@@ -71,11 +78,7 @@ export default () => {
             </List>
           </Col>
         </Row>
-        <Row>
-          <Col xs={12}>
-            <Bottom />
-          </Col>
-        </Row>
+        <Bottom />
       </Grid>
     </Footer>
   );
