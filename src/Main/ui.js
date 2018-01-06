@@ -72,7 +72,7 @@ export const HorizonScroll = styled.div`
   width: 100%;
   height: 100%;
   overflow-x: auto;
-  overflow-y: hidden;
+  padding-bottom: 1px;
   &::-webkit-scrollbar {
     width: 0;
   }
