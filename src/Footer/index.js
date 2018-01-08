@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import styled from "styled-components";
 import { Select } from "./Select";
-import { List, Title, Link } from "./common.js";
+import { List, Title, Link } from "./common";
 import Bottom from "./Bottom";
 
 const Footer = styled.footer`
