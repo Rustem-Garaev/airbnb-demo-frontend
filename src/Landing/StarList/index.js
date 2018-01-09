@@ -4,7 +4,6 @@ import star from "./star.svg";
 
 const StarsList = styled.span`
   display: inline-block;
-  margin-right: 4px;
 `;
 
 const Star = styled.span`
@@ -16,14 +15,11 @@ const Star = styled.span`
   background-size: cover;
 `;
 
-export default () => {
-  return (
-    <StarsList>
-      <Star />
-      <Star />
-      <Star />
-      <Star />
-      <Star />
-    </StarsList>
-  );
+export default ({ count = 0 }) => {
+  const stars = [];
+  for (let i = 0; i < count; ++i) {
+    stars.push(<Star key={i.toString()} />);
+  }
+
+  return <StarsList>{stars}</StarsList>;
 };

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "normalize.css";
 import Header from "./Header";
-import Main from "./Main";
+import Landing from "./Landing";
 import Footer from "./Footer";
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Main />
+        <Landing />
         <Footer />
       </div>
     );
