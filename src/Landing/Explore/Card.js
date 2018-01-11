@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Title = styled.p`
   font-weight: 700;
@@ -13,7 +14,7 @@ const Title = styled.p`
   }
 `;
 
-const Card = styled.a`
+const Card = styled(Link)`
   display: block;
   align-items: center;
   border: 1px solid rgba(72, 72, 72, 0.2);
@@ -38,7 +39,7 @@ const Image = styled.img`
 
 export default props => {
   return (
-    <Card href={props.link}>
+    <Card to={props.link}>
       <Image src={props.imgSrc} alt={props.imgAlt} />
       <Title>{props.title}</Title>
     </Card>

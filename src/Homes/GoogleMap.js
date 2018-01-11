@@ -21,7 +21,7 @@ export default () => {
         defaultCenter={{ lat: 55.828591, lng: 49.070102 }}
         defaultZoom={12}
         bootstrapURLKeys={{
-          key: "AIzaSyDcfRRDrYJTLbR5wJM-JvotvN2ImlVF9sw",
+          key: process.env.REACT_APP_GOOGLE_MAP_KEY,
           language: "ru"
         }}
       />
