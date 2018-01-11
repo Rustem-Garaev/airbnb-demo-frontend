@@ -37,32 +37,37 @@ const Right = styled.nav`
   }
 `;
 
+const ExternalLink = styled.a`
+  text-decoration: none;
+  padding-right: 12px;
+`;
+
 export default () => {
   return (
     <Bottom>
       <Row middle="xs">
         <Col xs={12} md={6} lg={6}>
           <Left>
-            <Link href="#">
+            <Link to="#">
               <Img src={logo} />
             </Link>
-            <Link href="#">&#169; Airbnb inc.</Link>
+            <Link to="#">&#169; Airbnb inc.</Link>
           </Left>
         </Col>
         <Col xs={12} md={6} lg={6}>
           <Right>
-            <Link href="#">Terms</Link>
-            <Link href="#">Privacy</Link>
-            <Link href="#">Site map</Link>
-            <Link href="#">
+            <Link to="#">Terms</Link>
+            <Link to="#">Privacy</Link>
+            <Link to="#">Site map</Link>
+            <ExternalLink href="#">
               <Img src={facebook} />
-            </Link>
-            <Link href="#">
+            </ExternalLink>
+            <ExternalLink href="#">
               <Img src={twitter} />
-            </Link>
-            <Link href="#">
+            </ExternalLink>
+            <ExternalLink href="#">
               <Img src={instagram} />
-            </Link>
+            </ExternalLink>
           </Right>
         </Col>
       </Row>

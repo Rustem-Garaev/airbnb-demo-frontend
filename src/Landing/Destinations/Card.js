@@ -15,7 +15,7 @@ const Title = styled.span`
 
 export default props => {
   return (
-    <Link href={props.link}>
+    <Link to={props.link}>
       <Img src={props.img} />
       <Title>{props.title}</Title>
     </Link>

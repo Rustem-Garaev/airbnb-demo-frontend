@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import { Title, SeeAll, SliderArrow, HorizonScroll } from "../ui";
-
-import Card from "./Card";
+import Card from "../../Homes/Card";
 
 import img1 from "./homes-1.png";
 import img2 from "./homes-2.png";
@@ -18,7 +17,7 @@ export default () => {
     <Homes>
       <Title>
         Homes
-        <SeeAll href="#">See all</SeeAll>
+        <SeeAll to="/homes">See all</SeeAll>
       </Title>
       <Grid>
         <Row>

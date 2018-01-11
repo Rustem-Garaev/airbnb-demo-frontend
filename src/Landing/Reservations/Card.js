@@ -39,7 +39,7 @@ const Description = styled.p`
 export default props => {
   return (
     <React.Fragment>
-      <Link href={props.link}>
+      <Link to={props.link}>
         <Img src={props.img} />
         <Title>{props.title}</Title>
         <Name>{props.name}</Name>

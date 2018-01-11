@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Img, Link } from "../ui";
+import { Img } from "../ui";
 import StarList from "../StarList";
+import { Link } from "react-router-dom";
 
 const Title = styled.span`
   font-size: 13px;
@@ -32,17 +33,21 @@ const Superhost = styled.span`
   line-height: 14px;
 `;
 
+const Card = styled(Link)`
+  text-decoration: none;
+`;
+
 export default props => {
   return (
     <React.Fragment>
-      <Link href={props.link}>
+      <Card to={props.link}>
         <Img src={props.img} />
         <Title>
           ${props.price} {props.title}
         </Title>
-      </Link>
+      </Card>
       <Description>
-        Entire house &#183;{" "}
+        Entire house &#183;
         {props.bedCount + (props.bedCount > 1 ? " beds" : " bed")}
       </Description>
       <StarList count={props.starCount} />

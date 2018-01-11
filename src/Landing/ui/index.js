@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import arrowRight from "./arrow-right.svg";
+import { Link as RouterLink } from "react-router-dom";
 
 export const Title = styled.h1`
   position: relative;
@@ -43,7 +44,7 @@ export const SliderArrow = styled.button`
   }
 `;
 
-export const SeeAll = styled.a`
+export const SeeAll = styled(RouterLink)`
   position: absolute;
   bottom: 0;
   right: 20px;
@@ -61,7 +62,7 @@ export const SeeAll = styled.a`
   }
 `;
 
-export const Link = styled.a`
+export const Link = styled(RouterLink)`
   display: block;
   text-decoration: none;
 `;

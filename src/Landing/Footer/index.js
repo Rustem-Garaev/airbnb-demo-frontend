@@ -48,33 +48,33 @@ export default () => {
           <Col md={2} mdOffset={1} lg={2} lgOffset={1}>
             <List>
               <Title>Airbnb</Title>
-              <Link href="#">About us</Link>
-              <Link href="#">Careers</Link>
-              <Link href="#">Press</Link>
-              <Link href="#">Policies</Link>
-              <Link href="#">Help</Link>
-              <Link href="#">Diversity & Belonging</Link>
+              <Link to="#">About us</Link>
+              <Link to="#">Careers</Link>
+              <Link to="#">Press</Link>
+              <Link to="#">Policies</Link>
+              <Link to="#">Help</Link>
+              <Link to="#">Diversity & Belonging</Link>
             </List>
           </Col>
           <Col md={2} mdOffset={1} lg={2} lgOffset={1}>
             <List>
               <Title>Discover</Title>
-              <Link href="#">Trust & Safety</Link>
-              <Link href="#">Travel Credit</Link>
-              <Link href="#">Gift Cards</Link>
-              <Link href="#">Airbnb Citizen</Link>
-              <Link href="#">Business Travel</Link>
-              <Link href="#">Guidebooks</Link>
-              <Link href="#">Airbnbmag</Link>
+              <Link to="#">Trust & Safety</Link>
+              <Link to="#">Travel Credit</Link>
+              <Link to="#">Gift Cards</Link>
+              <Link to="#">Airbnb Citizen</Link>
+              <Link to="#">Business Travel</Link>
+              <Link to="#">Guidebooks</Link>
+              <Link to="#">Airbnbmag</Link>
             </List>
           </Col>
           <Col md={2} mdOffset={1} lg={2} lgOffset={1}>
             <List>
               <Title>Hosting</Title>
-              <Link href="#">Why Host</Link>
-              <Link href="#">Hospitality</Link>
-              <Link href="#">Responsible Hosting</Link>
-              <Link href="#">Community Center</Link>
+              <Link to="#">Why Host</Link>
+              <Link to="#">Hospitality</Link>
+              <Link to="#">Responsible Hosting</Link>
+              <Link to="#">Community Center</Link>
             </List>
           </Col>
         </Row>

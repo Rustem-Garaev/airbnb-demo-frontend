@@ -6,21 +6,25 @@ import Experiences from "./Experiences";
 import Homes from "./Homes";
 import Reservations from "./Reservations";
 import Destinations from "./Destinations";
+import Footer from "./Footer";
 
 const Main = styled.main`
-  padding-top: 72px;
+  padding-top: 80px;
 `;
 
 export default () => {
   return (
-    <Grid>
-      <Main>
-        <Explore />
-        <Experiences />
-        <Homes />
-        <Reservations />
-        <Destinations />
-      </Main>
-    </Grid>
+    <React.Fragment>
+      <Grid>
+        <Main>
+          <Explore />
+          <Experiences />
+          <Homes />
+          <Reservations />
+          <Destinations />
+        </Main>
+      </Grid>
+      <Footer />
+    </React.Fragment>
   );
 };

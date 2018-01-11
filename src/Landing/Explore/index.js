@@ -17,7 +17,12 @@ export default () => {
         <Row>
           <HorizonScroll>
             <Col xs={6} md={5} lg={4}>
-              <Card link="#" imgSrc={homesImg} imgAlt="Homes" title="Homes" />
+              <Card
+                link="/homes"
+                imgSrc={homesImg}
+                imgAlt="Homes"
+                title="Homes"
+              />
             </Col>
             <Col xs={6} md={5} lg={4}>
               <Card

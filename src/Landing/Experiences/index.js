@@ -18,7 +18,7 @@ export default () => {
     <Experiences>
       <Title>
         Experiences
-        <SeeAll href="#">See all</SeeAll>
+        <SeeAll to="#">See all</SeeAll>
       </Title>
       <Grid>
         <Row>

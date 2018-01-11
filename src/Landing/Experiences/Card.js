@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Img, Link } from "../ui";
-import StarList from "../StarList";
+import StarList from "../../StarList";
 
 const Title = styled.span`
   font-size: 13px;
@@ -33,7 +33,7 @@ const Reviews = styled.span`
 export default props => {
   return (
     <React.Fragment>
-      <Link href={props.link}>
+      <Link to={props.link}>
         <Img src={props.img} />
         <Price>{"$" + props.price}</Price>
         <Title>{props.title}</Title>

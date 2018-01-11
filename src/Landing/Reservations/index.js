@@ -17,7 +17,7 @@ export default () => {
     <Reservation>
       <Title>
         Popular reservation around the world
-        <SeeAll href="#">See all</SeeAll>
+        <SeeAll to="#">See all</SeeAll>
       </Title>
       <Grid>
         <Row>
