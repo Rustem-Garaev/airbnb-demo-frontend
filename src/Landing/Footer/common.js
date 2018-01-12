@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as RouterLink } from "react-router-dom";
 
 export const List = styled.nav`
   display: none;
@@ -21,7 +22,7 @@ export const Title = styled.h5`
   }
 `;
 
-export const Link = styled.a`
+export const Link = styled(RouterLink)`
   text-decoration: none;
   font-size: 12px;
   line-height: 14px;
