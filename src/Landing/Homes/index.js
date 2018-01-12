@@ -19,46 +19,44 @@ export default () => {
         Homes
         <SeeAll to="/homes">See all</SeeAll>
       </Title>
-      <Grid>
-        <Row>
-          <HorizonScroll>
-            <Col xs={6} md={5} lg={4}>
-              <Card
-                link="#"
-                img={img1}
-                price="82"
-                title="La Salentina, see, nature & relax"
-                bedCount={9}
-                superhost={97}
-                starCount={5}
-              />
-            </Col>
-            <Col xs={6} md={5} lg={4}>
-              <Card
-                link="#"
-                img={img2}
-                price="82"
-                title="Your private 3 bedr. riad and exclusi..."
-                bedCount={5}
-                superhost={161}
-                starCount={5}
-              />
-            </Col>
-            <Col xs={6} md={5} lg={4}>
-              <Card
-                link="#"
-                img={img3}
-                price="200"
-                title="Dreamy Tropical Tree House"
-                bedCount={1}
-                superhost={364}
-                starCount={5}
-              />
-            </Col>
-            <SliderArrow />
-          </HorizonScroll>
-        </Row>
-      </Grid>
+      <Row>
+        <HorizonScroll>
+          <Col xs={6} md={5} lg={4}>
+            <Card
+              link="#"
+              img={img1}
+              price="82"
+              title="La Salentina, see, nature & relax"
+              bedCount={9}
+              superhost={97}
+              starCount={5}
+            />
+          </Col>
+          <Col xs={6} md={5} lg={4}>
+            <Card
+              link="#"
+              img={img2}
+              price="82"
+              title="Your private 3 bedr. riad and exclusi..."
+              bedCount={5}
+              superhost={161}
+              starCount={5}
+            />
+          </Col>
+          <Col xs={6} md={5} lg={4}>
+            <Card
+              link="#"
+              img={img3}
+              price="200"
+              title="Dreamy Tropical Tree House"
+              bedCount={1}
+              superhost={364}
+              starCount={5}
+            />
+          </Col>
+          <SliderArrow />
+        </HorizonScroll>
+      </Row>
     </Homes>
   );
 };

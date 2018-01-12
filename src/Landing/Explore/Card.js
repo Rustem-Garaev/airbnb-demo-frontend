@@ -20,6 +20,7 @@ const Card = styled(Link)`
   border: 1px solid rgba(72, 72, 72, 0.2);
   box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.08);
   border-radius: 4px;
+  padding: 0;
   text-decoration: none;
   @media only screen and (min-width: 577px) {
     display: flex;

@@ -21,14 +21,14 @@ const Main = UiMain.extend`
   flex-direction: column;
   flex-wrap: wrap;
   padding-top: 160px;
-
+  justify-content: space-between;
   @media only screen and (min-width: 577px) {
     flex-direction: row;
   }
 `;
 
 const Box = styled.div`
-  margin: 0 auto 24px;
+  margin-bottom: 24px;
   @media only screen and (min-width: 577px) {
     width: 48%;
     margin-bottom: 40px;

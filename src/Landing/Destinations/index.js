@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import { Row, Col } from "react-flexbox-grid";
 import { Title, SliderArrow, HorizonScroll } from "../ui";
 import Card from "./Card";
 
@@ -19,31 +19,29 @@ export default () => {
   return (
     <Destinations>
       <Title>Featured destinations</Title>
-      <Grid>
-        <Row>
-          <HorizonScroll>
-            <Col xs={4} md={3} lg={2}>
-              <Card link="#" img={img1} title="Paris" />
-            </Col>
-            <Col xs={4} md={3} lg={2}>
-              <Card link="#" img={img2} title="Miami" />
-            </Col>
-            <Col xs={4} md={3} lg={2}>
-              <Card link="#" img={img3} title="Tokyo" />
-            </Col>
-            <Col xs={4} md={3} lg={2}>
-              <Card link="#" img={img4} title="Cape town" />
-            </Col>
-            <Col xs={4} md={3} lg={2}>
-              <Card link="#" img={img5} title="Seoul" />
-            </Col>
-            <Col xs={4} md={3} lg={2}>
-              <Card link="#" img={img6} title="Los Angeles" />
-            </Col>
-            <SliderArrow />
-          </HorizonScroll>
-        </Row>
-      </Grid>
+      <Row>
+        <HorizonScroll>
+          <Col xs={4} md={3} lg={2}>
+            <Card link="#" img={img1} title="Paris" />
+          </Col>
+          <Col xs={4} md={3} lg={2}>
+            <Card link="#" img={img2} title="Miami" />
+          </Col>
+          <Col xs={4} md={3} lg={2}>
+            <Card link="#" img={img3} title="Tokyo" />
+          </Col>
+          <Col xs={4} md={3} lg={2}>
+            <Card link="#" img={img4} title="Cape town" />
+          </Col>
+          <Col xs={4} md={3} lg={2}>
+            <Card link="#" img={img5} title="Seoul" />
+          </Col>
+          <Col xs={4} md={3} lg={2}>
+            <Card link="#" img={img6} title="Los Angeles" />
+          </Col>
+          <SliderArrow />
+        </HorizonScroll>
+      </Row>
     </Destinations>
   );
 };

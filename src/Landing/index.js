@@ -7,10 +7,7 @@ import Homes from "./Homes";
 import Reservations from "./Reservations";
 import Destinations from "./Destinations";
 import Footer from "./Footer";
-
-const Main = styled.main`
-  padding-top: 80px;
-`;
+import { Main } from "../ui";
 
 export default () => {
   return (
