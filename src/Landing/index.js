@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { Grid } from "react-flexbox-grid";
 import Explore from "./Explore";
 import Experiences from "./Experiences";

@@ -30,18 +30,17 @@ const Reviews = styled.span`
   line-height: 14px;
 `;
 
-export default props => {
+export default ({ to, img, price, title, stars, reviews }) => {
   return (
     <React.Fragment>
-      <Link to={props.link}>
-        <Img src={props.img} />
-        <Price>{"$" + props.price}</Price>
-        <Title>{props.title}</Title>
+      <Link to={to}>
+        <Img src={img} />
+        <Price>{"$" + price}</Price>
+        <Title>{title}</Title>
       </Link>
-      <StarList count={props.stars} />
+      <StarList count={stars} />
       <Reviews>
-        {props.reviews +
-          (props.reviews > 1 || props.reviews === 0 ? " reviews" : " review")}
+        {reviews + (reviews > 1 || reviews === 0 ? " reviews" : " review")}
       </Reviews>
     </React.Fragment>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import times from "lodash/times";
 import star from "./star.svg";
 
 const StarsList = styled.span`
@@ -16,10 +17,5 @@ const Star = styled.span`
 `;
 
 export default ({ count = 0 }) => {
-  const stars = [];
-  for (let i = 0; i < count; ++i) {
-    stars.push(<Star key={i.toString()} />);
-  }
-
-  return <StarsList>{stars}</StarsList>;
+  return <StarsList>{times(count, id => <Star key={id} />)}</StarsList>;
 };

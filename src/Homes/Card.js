@@ -37,21 +37,21 @@ const Card = styled(Link)`
   text-decoration: none;
 `;
 
-export default props => {
+export default ({ to, img, price, title, bedCount, starCount, superhost }) => {
   return (
     <React.Fragment>
-      <Card to={props.link}>
-        <Img src={props.img} />
+      <Card to={to}>
+        <Img src={img} />
         <Title>
-          ${props.price} {props.title}
+          ${price} {title}
         </Title>
       </Card>
       <Description>
         Entire house &#183;
-        {props.bedCount + (props.bedCount > 1 ? " beds" : " bed")}
+        {bedCount + (bedCount > 1 ? " beds" : " bed")}
       </Description>
-      <StarList count={props.starCount} />
-      <Superhost>{props.superhost} &#183; Superhost</Superhost>
+      <StarList count={starCount} />
+      <Superhost>{superhost} &#183; Superhost</Superhost>
     </React.Fragment>
   );
 };

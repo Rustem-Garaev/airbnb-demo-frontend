@@ -8,10 +8,7 @@ const Footer = styled.footer`
   font-size: 16px;
   line-height: 19px;
   @media only screen and (min-width: 577px) {
-    margin: 30px 0 24px;
-  }
-  @media only screen and (min-width: 769px) {
-    margin: 29px 0 25px;
+    margin: 30px 0 25px;
   }
 `;
 

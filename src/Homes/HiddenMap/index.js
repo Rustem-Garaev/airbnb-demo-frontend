@@ -1,9 +1,8 @@
-import React from "react";
 import styled from "styled-components";
 
 import icon from "./icon.svg";
 
-const Icon = styled.span`
+export default styled.span`
   position: fixed;
   bottom: 24px;
   right: 8px;
@@ -21,7 +20,3 @@ const Icon = styled.span`
     display: none;
   }
 `;
-
-export default () => {
-  return <Icon />;
-};

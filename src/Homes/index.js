@@ -44,7 +44,7 @@ export default () => {
           <Main>
             <Box>
               <Card
-                link="#"
+                to="#"
                 img={img1}
                 price="82"
                 title="La Salentina, see, nature & relax"
@@ -55,7 +55,7 @@ export default () => {
             </Box>
             <Box>
               <Card
-                link="#"
+                to="#"
                 img={img2}
                 price="82"
                 title="Your private 3 bedr. riad and exclusi..."
@@ -66,7 +66,7 @@ export default () => {
             </Box>
             <Box>
               <Card
-                link="#"
+                to="#"
                 img={img3}
                 price="200"
                 title="Dreamy Tropical Tree House"
@@ -77,7 +77,7 @@ export default () => {
             </Box>
             <Box>
               <Card
-                link="#"
+                to="#"
                 img={img4}
                 price="110"
                 title="Best location old town luxury loft"
@@ -88,7 +88,7 @@ export default () => {
             </Box>
             <Box>
               <Card
-                link="#"
+                to="#"
                 img={img5}
                 price="83"
                 title="Lussuoso. Vista incantevole."
@@ -99,7 +99,7 @@ export default () => {
             </Box>
             <Box>
               <Card
-                link="#"
+                to="#"
                 img={img6}
                 price="72"
                 title="In the historical center of Lecce"

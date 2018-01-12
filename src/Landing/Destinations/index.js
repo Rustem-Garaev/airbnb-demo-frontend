@@ -22,22 +22,22 @@ export default () => {
       <Row>
         <HorizonScroll>
           <Col xs={4} md={3} lg={2}>
-            <Card link="#" img={img1} title="Paris" />
+            <Card to="#" img={img1} title="Paris" />
           </Col>
           <Col xs={4} md={3} lg={2}>
-            <Card link="#" img={img2} title="Miami" />
+            <Card to="#" img={img2} title="Miami" />
           </Col>
           <Col xs={4} md={3} lg={2}>
-            <Card link="#" img={img3} title="Tokyo" />
+            <Card to="#" img={img3} title="Tokyo" />
           </Col>
           <Col xs={4} md={3} lg={2}>
-            <Card link="#" img={img4} title="Cape town" />
+            <Card to="#" img={img4} title="Cape town" />
           </Col>
           <Col xs={4} md={3} lg={2}>
-            <Card link="#" img={img5} title="Seoul" />
+            <Card to="#" img={img5} title="Seoul" />
           </Col>
           <Col xs={4} md={3} lg={2}>
-            <Card link="#" img={img6} title="Los Angeles" />
+            <Card to="#" img={img6} title="Los Angeles" />
           </Col>
           <SliderArrow />
         </HorizonScroll>

@@ -38,11 +38,11 @@ const Image = styled.img`
   }
 `;
 
-export default props => {
+export default ({ to, imgSrc, imgAlt, title }) => {
   return (
-    <Card to={props.link}>
-      <Image src={props.imgSrc} alt={props.imgAlt} />
-      <Title>{props.title}</Title>
+    <Card to={to}>
+      <Image src={imgSrc} alt={imgAlt} />
+      <Title>{title}</Title>
     </Card>
   );
 };

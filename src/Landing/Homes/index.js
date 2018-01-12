@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Grid, Row, Col } from "react-flexbox-grid";
+import { Row, Col } from "react-flexbox-grid";
 import { Title, SeeAll, SliderArrow, HorizonScroll } from "../ui";
 import Card from "../../Homes/Card";
 
@@ -23,7 +23,7 @@ export default () => {
         <HorizonScroll>
           <Col xs={6} md={5} lg={4}>
             <Card
-              link="#"
+              to="#"
               img={img1}
               price="82"
               title="La Salentina, see, nature & relax"
@@ -34,7 +34,7 @@ export default () => {
           </Col>
           <Col xs={6} md={5} lg={4}>
             <Card
-              link="#"
+              to="#"
               img={img2}
               price="82"
               title="Your private 3 bedr. riad and exclusi..."
@@ -45,7 +45,7 @@ export default () => {
           </Col>
           <Col xs={6} md={5} lg={4}>
             <Card
-              link="#"
+              to="#"
               img={img3}
               price="200"
               title="Dreamy Tropical Tree House"

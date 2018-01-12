@@ -13,11 +13,11 @@ const Title = styled.span`
   }
 `;
 
-export default props => {
+export default ({ to, img, title }) => {
   return (
-    <Link to={props.link}>
-      <Img src={props.img} />
-      <Title>{props.title}</Title>
+    <Link to={to}>
+      <Img src={img} />
+      <Title>{title}</Title>
     </Link>
   );
 };
