@@ -9,10 +9,20 @@ const Header = styled.div`
   top: 80px;
   left: 0;
   right: 0;
-  box-shadow: 0px 0.5px 0px rgba(72, 72, 72, 0.3);
-  height: 56px;
+  border-top: 0.5px solid rgba(72, 72, 72, 0.3);
+  border-bottom: 0.5px solid rgba(72, 72, 72, 0.3);
   background: white;
+  z-index: 5;
 `;
+
+function generateDateButtonTitle(startDate, endDate, selectedFilter) {
+  const startDateString = startDate && startDate.format("DD MMM");
+  const endDateString = endDate && endDate.format("DD MMM");
+
+  return startDateString && endDateString
+    ? `${startDateString} - ${endDateString}`
+    : selectedFilter === "Dates" ? "Check in - Check out" : "Dates";
+}
 
 export default class extends React.Component {
   state = {
@@ -22,81 +32,107 @@ export default class extends React.Component {
   };
 
   handleFilterClick = name => {
-    function toggle(prevState, newName) {
-      return prevState.selectedFilter === newName ? null : newName;
-    }
-
     this.setState(prevState => ({
-      selectedFilter: toggle(prevState, name)
+      selectedFilter: prevState.selectedFilter === name ? null : name
     }));
   };
 
-  handleOverlayClick = () => {
+  handleCancelClick = () => {
+    this.setState({
+      selectedFilter: null,
+      startDate: null,
+      endDate: null
+    });
+  };
+
+  handleDateChange = ({ startDate, endDate }) => {
+    this.setState({ startDate, endDate });
+  };
+
+  handleApplyClick = () => {
     this.setState({ selectedFilter: null });
   };
 
-  handleDateChange = (startDate, endDate) => {
-    console.log(startDate, endDate);
-    //this.setState({ startDate, endDate });
+  handleOverlayClick = () => {
+    this.setState({
+      selectedFilter: null,
+      startDate: null,
+      endDate: null
+    });
+  };
+
+  handleResetClick = () => {
+    this.setState({
+      startDate: null,
+      endDate: null
+    });
   };
 
   render() {
     const { selectedFilter, startDate, endDate } = this.state;
+
     return (
       <Header>
         <Grid>
           <Filter
+            /*name - постояное значение, title - меняется если фильтр активен*/
             name="Dates"
+            title={generateDateButtonTitle(startDate, endDate, selectedFilter)}
             selected={selectedFilter === "Dates"}
-            handleFilterClick={this.handleFilterClick}
-            handleOverlayClick={this.handleOverlayClick}
+            filterClick={this.handleFilterClick}
+            overlayClick={this.handleCancelClick}
+            applyClick={this.handleApplyClick}
+            cancelClick={this.handleCancelClick}
           >
             <Calendar
               startDate={startDate}
               endDate={endDate}
-              handleDateChange={this.handleDateChange}
+              dateChange={this.handleDateChange}
+              cancelClick={this.handleCancelClick}
+              resetClick={this.handleResetClick}
+              saveClick={this.handleApplyClick}
             />
           </Filter>
           <Filter
             name="Guests"
+            title="Guests"
             selected={selectedFilter === "Guests"}
-            handleFilterClick={this.handleFilterClick}
-            handleOverlayClick={this.handleOverlayClick}
+            filterClick={this.handleFilterClick}
           >
             Empty
           </Filter>
           <Filter
             name="Room type"
-            desktopOnly
+            title="Room type"
+            lgOnly
             selected={selectedFilter === "Room type"}
-            handleFilterClick={this.handleFilterClick}
-            handleOverlayClick={this.handleOverlayClick}
+            filterClick={this.handleFilterClick}
           >
             Empty
           </Filter>
           <Filter
             name="Price"
-            desktopOnly
+            title="Price"
+            lgOnly
             selected={selectedFilter === "Price"}
-            handleFilterClick={this.handleFilterClick}
-            handleOverlayClick={this.handleOverlayClick}
+            filterClick={this.handleFilterClick}
           >
             Empty
           </Filter>
           <Filter
             name="Instant book"
-            desktopOnly
+            title="Instant book"
+            lgOnly
             selected={selectedFilter === "Instant book"}
-            handleFilterClick={this.handleFilterClick}
-            handleOverlayClick={this.handleOverlayClick}
+            filterClick={this.handleFilterClick}
           >
             Empty
           </Filter>
           <Filter
             name="More Filters"
+            title="More Filters"
             selected={selectedFilter === "More Filters"}
-            handleFilterClick={this.handleFilterClick}
-            handleOverlayClick={this.handleOverlayClick}
+            filterClick={this.handleFilterClick}
           >
             Empty
           </Filter>

@@ -22,7 +22,7 @@ const Bottom = styled.div`
 `;
 
 const Link = CommonLink.extend`
-  padding-right: 12px;
+  padding-right: 13px;
 `;
 
 const Img = styled.img`
@@ -39,7 +39,7 @@ const Right = styled.nav`
 
 const ExternalLink = styled.a`
   text-decoration: none;
-  padding-right: 12px;
+  padding-right: 13px;
 `;
 
 export default () => {

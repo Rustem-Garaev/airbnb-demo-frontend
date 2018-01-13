@@ -8,6 +8,7 @@ import GoogleMap from "./GoogleMap";
 import Pagination from "./Pagination";
 import Footer from "./Footer";
 import HiddenMap from "./HiddenMap";
+import { Helmet } from "react-helmet";
 
 import img1 from "./homes1.png";
 import img2 from "./homes2.png";
@@ -17,6 +18,7 @@ import img5 from "./homes5.png";
 import img6 from "./homes6.png";
 
 const Main = UiMain.extend`
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -38,6 +40,9 @@ const Box = styled.div`
 export default () => {
   return (
     <Grid>
+      <Helmet>
+        <title>Homes</title>
+      </Helmet>
       <Filters />
       <Row>
         <Col xs={12} md={12} lg={8}>
