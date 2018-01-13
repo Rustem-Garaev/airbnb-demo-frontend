@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Grid } from "react-flexbox-grid";
+import Filter from "./Filter";
+import Calendar from "./Calendar";
 
 const Header = styled.div`
   position: fixed;
@@ -12,41 +14,94 @@ const Header = styled.div`
   background: white;
 `;
 
-const Button = styled.button`
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 16px;
-  padding: 7px 16px;
-  margin: 12px 12px 12px 0;
-  border: 0.5px solid rgba(72, 72, 72, 0.2);
-  border-radius: 4px;
-  color: #383838;
-  cursor: pointer;
-  background-color: white;
-  transition: background-color 0.2s;
-  &:hover {
-    background-color: #008489;
-  }
-`;
+export default class extends React.Component {
+  state = {
+    selectedFilter: null,
+    startDate: null,
+    endDate: null
+  };
 
-const DesktopButton = Button.extend`
-  display: none;
-  @media only screen and (min-width: 992px) {
-    display: inline-block;
-  }
-`;
+  handleFilterClick = name => {
+    function toggle(prevState, newName) {
+      return prevState.selectedFilter === newName ? null : newName;
+    }
 
-export default () => {
-  return (
-    <Header>
-      <Grid>
-        <Button>Dates</Button>
-        <Button>Guests</Button>
-        <DesktopButton>Room type</DesktopButton>
-        <DesktopButton>Price</DesktopButton>
-        <DesktopButton>Instant book</DesktopButton>
-        <Button>More Filters</Button>
-      </Grid>
-    </Header>
-  );
-};
+    this.setState(prevState => ({
+      selectedFilter: toggle(prevState, name)
+    }));
+  };
+
+  handleOverlayClick = () => {
+    this.setState({ selectedFilter: null });
+  };
+
+  handleDateChange = (startDate, endDate) => {
+    console.log(startDate, endDate);
+    //this.setState({ startDate, endDate });
+  };
+
+  render() {
+    const { selectedFilter, startDate, endDate } = this.state;
+    return (
+      <Header>
+        <Grid>
+          <Filter
+            name="Dates"
+            selected={selectedFilter === "Dates"}
+            handleFilterClick={this.handleFilterClick}
+            handleOverlayClick={this.handleOverlayClick}
+          >
+            <Calendar
+              startDate={startDate}
+              endDate={endDate}
+              handleDateChange={this.handleDateChange}
+            />
+          </Filter>
+          <Filter
+            name="Guests"
+            selected={selectedFilter === "Guests"}
+            handleFilterClick={this.handleFilterClick}
+            handleOverlayClick={this.handleOverlayClick}
+          >
+            Empty
+          </Filter>
+          <Filter
+            name="Room type"
+            desktopOnly
+            selected={selectedFilter === "Room type"}
+            handleFilterClick={this.handleFilterClick}
+            handleOverlayClick={this.handleOverlayClick}
+          >
+            Empty
+          </Filter>
+          <Filter
+            name="Price"
+            desktopOnly
+            selected={selectedFilter === "Price"}
+            handleFilterClick={this.handleFilterClick}
+            handleOverlayClick={this.handleOverlayClick}
+          >
+            Empty
+          </Filter>
+          <Filter
+            name="Instant book"
+            desktopOnly
+            selected={selectedFilter === "Instant book"}
+            handleFilterClick={this.handleFilterClick}
+            handleOverlayClick={this.handleOverlayClick}
+          >
+            Empty
+          </Filter>
+          <Filter
+            name="More Filters"
+            selected={selectedFilter === "More Filters"}
+            handleFilterClick={this.handleFilterClick}
+            handleOverlayClick={this.handleOverlayClick}
+          >
+            Empty
+          </Filter>
+        </Grid>
+      </Header>
+    );
+  }
+}
