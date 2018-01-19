@@ -11,7 +11,6 @@ const Container = styled.div`
     height: calc(100% - 136px);
     right: 0;
     bottom: 0;
-    z-index: -1;
   }
   @media only screen and (min-width: 1400px) {
     width: 36%;
