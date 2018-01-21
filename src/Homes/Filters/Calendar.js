@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import "react-dates/initialize";
-import "./react_dates_overrides.css";
+import "./ReactDates.css";
 import "react-dates/lib/css/_datepicker.css";
 import { DayPickerRangeController } from "react-dates";
 import moment from "moment";
 import arrowRight from "./arrowRight.svg";
-import exit from "./exit.svg";
+import close from "./close.svg";
 import ScrollLock from "react-scrolllock";
 
 const matchesXs = matchMedia("(min-width: 577px)").matches;
@@ -36,10 +36,10 @@ const ArrowRight = styled.span`
   background-size: contain;
 `;
 
-const Exit = styled.button`
+const Close = styled.button`
   width: 16px;
   height: 16px;
-  background: url(${exit});
+  background: url(${close});
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -131,13 +131,14 @@ export default class extends React.Component {
       resetClick,
       saveClick
     } = this.props;
+
     return (
       <React.Fragment>
         {!matchesXs && (
           <React.Fragment>
             <ScrollLock />
             <Header>
-              <Exit onClick={cancelClick} />
+              <Close onClick={cancelClick} />
               <Title>Dates</Title>
               <Reset onClick={resetClick}>Reset</Reset>
             </Header>

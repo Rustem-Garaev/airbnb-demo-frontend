@@ -15,7 +15,7 @@ const Header = styled.div`
   z-index: 5;
 `;
 
-function generateDateButtonTitle(startDate, endDate, selectedFilter) {
+function getDateButtonTitle(startDate, endDate, selectedFilter) {
   const startDateString = startDate && startDate.format("DD MMM");
   const endDateString = endDate && endDate.format("DD MMM");
 
@@ -77,7 +77,7 @@ export default class extends React.Component {
           <Filter
             /*name - постояное значение, title - меняется если фильтр активен*/
             name="Dates"
-            title={generateDateButtonTitle(startDate, endDate, selectedFilter)}
+            title={getDateButtonTitle(startDate, endDate, selectedFilter)}
             selected={selectedFilter === "Dates"}
             filterClick={this.handleFilterClick}
             overlayClick={this.handleCancelClick}
