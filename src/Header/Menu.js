@@ -14,7 +14,8 @@ const Link = styled.a`
   line-height: 24px;
   text-align: center;
   padding-left: 8px;
-  margin: 0 4px;
+  font-weight: 400;
+  margin: 0 6px;
   text-decoration: none;
   color: #383838;
   cursor: pointer;
