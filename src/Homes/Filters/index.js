@@ -19,9 +19,10 @@ function getDateButtonTitle(startDate, endDate, selectedFilter) {
   const startDateString = startDate && startDate.format("DD MMM");
   const endDateString = endDate && endDate.format("DD MMM");
 
-  return startDateString && endDateString
-    ? `${startDateString} - ${endDateString}`
-    : selectedFilter === "Dates" ? "Check in - Check out" : "Dates";
+  if (startDateString && endDateString)
+    return `${startDateString} - ${endDateString}`;
+  else if (selectedFilter === "Dates") return "Check in - Check out";
+  else return "Dates";
 }
 
 export default class extends React.Component {
